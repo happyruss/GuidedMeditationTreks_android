@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="10dp"
+    android:gravity="center"
+    android:background="@mipmap/meditation_logoblack"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:id="@+id/screen_main">
+
+    <TextView
+        android:id="@+id/gmtTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gmt"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:gravity="center_horizontal"
+        />
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+            <Button
+                android:id="@+id/btSpirit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meet Your\nSpirit Guide"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btRelations"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Heal a\nRelationship"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+            <Button
+                android:id="@+id/btThought"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Reprogram\nCounterproductive\nThoughts"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+
+            <Button
+                android:id="@+id/btManifest"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manifest"
+                android:onClick="queueMeditation"
+                android:gravity="center"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ToggleButton
+        android:id="@+id/btnPlay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textOn=""
+        android:textOff=""
+        android:onClick="clickPlay"
+        android:background="@layout/button_custom"
+        android:gravity="center"
+        android:visibility="invisible"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Voice"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skVoice"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/white"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nature"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skNature"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/white"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Noise"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skNoise"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/white"
+        android:max="100">
+    </SeekBar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tones"
+        android:layout_gravity="left">
+    </TextView>
+    <SeekBar
+        android:id="@+id/skTones"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:progressDrawable="@color/white"
+        android:max="100">
+    </SeekBar>
+
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33">
+
+            <ToggleButton
+                android:id="@+id/tgTones"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Noise"
+                android:textOff="Binaural"
+                android:textOn="Isochronic"
+                android:onClick="clickTones"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvTimer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="00:00"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:gravity="center"
+            />
+
+        <RelativeLayout
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.33"
+            android:gravity="right">
+
+            <Button
+                android:id="@+id/btReview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rate App"
+                android:onClick="rateApp"
+                android:gravity="center"
+                />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
